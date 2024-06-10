@@ -1,0 +1,74 @@
+<% layout("/layouts/boilerplate") %>
+
+
+    <div class="row mt-4">
+        <div class="col-7 offset-2">
+            <h3 class="new-form new-head">Fill the form to create a listing</h3>
+            <form action="/listings" method="post" novalidate class="new-form needs-validation"
+                enctype="multipart/form-data">
+                <div>
+                    <label for="title" class="form-label mt-1">Title</label>
+                    <input type="text" name="listing[title]" id="title" class="form-control mt-1"
+                        placeholder="Add a Title" required>
+                    <div class="valid-feedback">Title Looks Classy!!</div>
+                    <div class="invalid-feedback">Enter a title</div>
+                </div>
+                <div>
+                    <label for="description" class="form-label mt-1">Description</label>
+                    <textarea type="text" name="listing[description]" id="description" class="form-control mt-1"
+                        placeholder="Place desc..." required></textarea>
+                    <div class="valid-feedback">Good job!!</div>
+                    <div class="invalid-feedback">Enter a short description</div>
+                </div>
+
+                <div>
+                    <label for="image" class="form-label mt-1">Upload Image</label>
+                    <input type="file" name="listing[image]" id="image" class="form-control mt-1" required>
+
+                </div>
+                <div class="input-group  mt-3 mb-1">
+                    <label class="input-group-text" for="inputGroupSelect01">Select Category</label>
+                    <select class="form-select" id="inputGroupSelect01" name="listing[category]">
+                        <option selected>Rooms</option>
+                        <option value="Cities">Cities</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Beach">Beach</option>
+                        <option value="Country Side">Country Side</option>
+                        <option value="Rooms">Rooms</option>
+                        <option value="Artic"> Artic</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Diving">Diving</option>
+                        <option value="Farms">Farms</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="price" class="form-label mt-1">Price</label>
+                        <input type="number" name="listing[price]" id="price" class="form-control" required>
+
+                        <div class="invalid-feedback">Enter value</div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="country" class="form-label mt-1">Country</label>
+                        <input type="text" name="listing[country]" id="country" class="form-control mt-1" required>
+
+                        <div class="invalid-feedback">Invalid Country name</div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label for="location" class="form-label mt-1">Location</label>
+                    <input type="text" name="listing[location]" id="location" class="form-control mt-1"
+                        placeholder="Jaipur,Rajasthan" required>
+
+                    <div class="invalid-feedback">Invalid Location</div>
+                </div>
+                <br>
+                <button class="btn btn-dark add-btn mb-2">Submit</button>
+            </form>
+        </div>
+    </div>
