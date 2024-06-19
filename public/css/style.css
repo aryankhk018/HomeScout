@@ -275,4 +275,16 @@ body {
     width: 100% !important;
     margin: 1rem 0.5rem 1rem 0.5rem !important;
   }
+
+  .signup-form {
+    width: 75% !important;
+  }
+
+  .login-from {
+    width: 100% !important;
+  }
+
+  .login-from-parent {
+    display: block !important;
+  }
 }
