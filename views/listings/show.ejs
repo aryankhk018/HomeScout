@@ -5,15 +5,15 @@
 
     </script>
     <div class="container">
-        <div class="row ">
-            <div class="col-5 offset-2">
-                <h3 class="offset-1">
+        <div class="row -container">
+            <div class="col-5 offset-2 spec-listing">
+                <h3 class="offset-1  listing-title">
                     <%= listing.title %>
                 </h3>
 
 
                 <div class="card show-card listing-card">
-                    <img src="<%= listing.image.url%>" class="card-img-top mb-2" alt="listing.image">
+                    <img src="<%= listing.image.url%>" class="card-img-top mb-2 listing-image" alt="listing.image">
                     <div class="card-body">
                         <h5 class="card-title">
 
@@ -22,7 +22,7 @@
                             <p><b>Listed By:</b><i>
                                     &#64;<%= listing.owner.username %>
                                 </i></p>
-                            <p>
+                            <p class="listing-desc">
                                 <%= listing.description %>
                             </p>
                             <p>&#8377;<%= listing.price.toLocaleString("en-IN") %>
@@ -53,13 +53,13 @@
 
         </div>
     </div>
-    <div class="col-6 offset-3 ">
-        <hr>
+    <div class="col-6 offset-3 listing-review ">
+
         <% if(currUser){ %>
-            <h4>Leave a Review</h4>
+            <h4 class="">Leave a Review</h4>
             <form action="/listings/<%= listing.id %>/review" novalidate class="needs-validation" method="POST">
 
-                <div class="mb-3 mt-2">
+                <div class="mb-3 mt-2  ">
                     <label for="rating" class="form-label">Rating</label>
                     <fieldset class="starability-slot">
                         <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
@@ -88,11 +88,11 @@
             <hr>
             <% } %>
                 <% if(listing.reviews.length>0){ %>
-                    <div class="row ">
+                    <div class="row allreviews ">
                         <p><b>All Reviews</b></p>
 
                         <% for(review of listing.reviews) {%>
-                            <div class="card col-4   mb-3 ms-2">
+                            <div class="card col-4   mb-3 ms-2 review-section">
                                 <div class="card-body">
                                     <div class="card-title">
                                         <b> &#64;<%= review.author.username %></b>
@@ -114,7 +114,7 @@
                     <% } %>
                         <hr>
     </div>
-    <div class="col-6 offset-3 ">
+    <div class="col-6 offset-3 listing-map ">
         <h3>Where you'll be</h3>
         <div id="map" class="mb-3"></div>
     </div>

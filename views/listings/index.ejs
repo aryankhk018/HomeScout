@@ -1,43 +1,5 @@
 <% layout("/layouts/boilerplate") %>
-    <style>
-        #filters {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: 5.5rem;
 
-        }
-
-        .filter {
-            text-align: center;
-            margin-right: 2rem;
-            margin-top: 1rem;
-            opacity: 0.8;
-        }
-
-        .filter:hover {
-            opacity: 1;
-            cursor: pointer;
-        }
-
-        .filter a {
-            color: rgba(0, 0, 0, 0.886);
-        }
-
-        .tax-info {
-            display: none;
-        }
-
-        .tax-toggle {
-            border: 1px solid rgba(108, 106, 106, 0.502);
-            margin: 1rem 0rem 0rem 2rem;
-            padding: 5px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50px;
-        }
-    </style>
     <div id="filters">
         <div class="filter">
             <div><a href="/listings/category/Cities"><i class="fa-solid fa-city"></i></a></div>

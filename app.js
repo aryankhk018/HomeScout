@@ -42,6 +42,7 @@ async function main() {
 //setting path of views folder
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
 //Using the url parameters
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
