@@ -219,13 +219,6 @@ body {
 }
 
 @media screen and (max-width: 667px) {
-  .mainContainer {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
-  }
   .listing-card,
   .card {
     margin: 0 !important;
