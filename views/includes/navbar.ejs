@@ -25,7 +25,7 @@
                     <a class="nav-link" href="/listings/new">HomeScout your home</a>
                 </li>
 
-                <% if(!currUser){ %>
+                <% if(!locals.currUser){ %>
                     <li class="nav-item ">
                         <a class="nav-link credential" href="/signUp"><button class="btn add-btn">Sign Up</button></a>
                     </li>
@@ -33,7 +33,7 @@
                         <a class="nav-link credential" href="/login"><button class="btn add-btn">Log In </button></a>
                     </li>
                     <% } %>
-                        <% if(currUser){ %>
+                        <% if(locals.currUser){ %>
                             <li class="nav-item ">
                                 <a class="nav-link credential" href="/logout"><button
                                         class="btn btn-outline-secondary">Log

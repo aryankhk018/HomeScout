@@ -36,7 +36,10 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(dbUrl);
+  await mongoose.connect(dbUrl, {
+    serverSelectionTimeoutMS: 10000,
+    socketTimeoutMS: 45000,
+  });
 }
 
 //setting path of views folder
